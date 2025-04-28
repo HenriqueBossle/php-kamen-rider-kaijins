@@ -1,0 +1,14 @@
+services:
+
+web:
+    build: .
+    container_name: php_kamen_rider_kaijins
+    restart: always
+    ports:
+    - "8080:80"
+    mysql:
+      image: mysql
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: example
+      # (this is just an example, not intended to be a production configuration)
